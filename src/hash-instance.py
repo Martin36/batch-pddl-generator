@@ -11,6 +11,8 @@ import sys
 DIR = Path(__file__).resolve().parent
 REPO = DIR.parent
 
+os.environ["DOWNWARD_REPO"] = "/home/martin/repos/downward/builds/release/bin"
+
 try:
     DOWNWARD_DIR = Path(os.environ["DOWNWARD_REPO"])
 except KeyError:
@@ -19,8 +21,8 @@ TRANSLATOR_DIR = DOWNWARD_DIR / "src" / "translate"
 
 sys.path.insert(0, str(TRANSLATOR_DIR))
 
-from pddl_parser import pddl_file
-import pddl
+from translate.pddl_parser import pddl_file
+import translate.pddl as pddl
 
 
 def dump_task(task):

@@ -156,7 +156,7 @@ DOMAINS = [
     Domain(
         "blocksworld",
         "blocksworld 4 {n} {seed}",
-        [get_int("n", lower=2, upper=100)],
+        [get_int("n", lower=2, upper=10)],
     ),
     Domain(
         "childsnack",
