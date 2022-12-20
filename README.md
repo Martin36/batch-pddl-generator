@@ -60,3 +60,12 @@ within given resource limits.
 
 After generating the benchmark tasks, you might want to run the
 `find-duplicate-instances.py` script to detect duplicates.
+
+To do this you will first have to install Fast Downward, which you will find instructions for here: https://www.fast-downward.org/ObtainingAndRunningFastDownward
+
+After installing Fast Downward, run the `find-duplicate-instances.py` script as follows:
+```
+DOWNWARD_REPO=<path/to/downward/repo> python src/find-duplicate-instances.py <path/to/generated/instances>
+```
+
+The output will contain the files that are duplicates. 
